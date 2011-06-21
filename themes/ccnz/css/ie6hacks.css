@@ -1,0 +1,66 @@
+/*!
+ * ie6hacks.css
+ * Layout hacks for MSIE6. These styles are only delivered to MSIE6.
+ * Created 27.02.2011 by CrisisCampNZ (CCNZ)
+ * Note: Preface hacks with #page to override style.css
+*/
+
+	#page div.submit-incident a {
+		float: none; /* shrinkwrap text */
+		display: block; /* shrinkwrap text */
+		min-height: 17px; /* show all of icon */
+		background-image: url(/themes/ccnz/images/submit-incident.gif); /* png fallback */
+	}
+	#page div.submit-incident a:hover {
+		background-position: 10px 1px; /* disable hover state */
+	}	
+	
+/* (header) search form */
+
+	#page div#searchbox ul li {
+		 margin-right: 10px; /* reduce space between text input and submit button */
+	}
+	#page div.search-form input.searchbtn {
+			position: relative; /* render outdents */
+			text-indent: 0; /* else hides button */    
+			font-size: 0; /* hide text */
+			line-height: 7px; /* hide text */
+			background-image: url(/themes/ccnz/images/search-button-797979.gif); /* png fallback */
+	}		
+	
+/* threesteps */
+
+	#threesteps div.step {
+	/* ie6 doesn't understand > div */
+			background: #111;
+			width: 248px;
+			border: 1px solid #5f5f5f;
+			margin-left: 8px;
+			height: 140px;
+			float: left;
+			padding: 20px;
+			color: #fff;
+			font-size: 14px;
+			line-height: 140%;
+			font-weight: normal;
+	}
+	
+/* threesteps search form */
+
+	#page #threesteps form a {
+	/* match height of adjacent search field */
+		padding-top: 3px;
+		padding-bottom: 3px;
+		margin-bottom: 1px;
+		display: inline-block;
+	}	
+	
+/* RH sidebar */
+
+	#page div.howto-report,
+	#page div.social-buttons {
+		float: none; /* resolve width issues */
+		overflow: auto; /* clear floated children */
+		zoom: 1; /* display bgcolor */
+		padding-bottom: 0; /* redice vert whitespace */
+	}	

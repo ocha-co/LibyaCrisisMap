@@ -1,0 +1,42 @@
+/*!
+ * ie7hacks.css
+ * Layout hacks for MSIE7. These styles are only delivered to MSIE7.
+ * Created 27.02.2011 by CrisisCampNZ (CCNZ)
+ * Note: Preface hacks with #page to override style.css
+*/
+
+	#page div.submit-incident a {
+		float: none; /* shrinkwrap text */
+		display: block; /* shrinkwrap text */
+		min-height: 17px; /* show all of icon */
+	}
+	
+/* (header) search form */
+
+	#page div#searchbox ul li {
+		 margin-right: 10px; /* reduce space between text input and submit button */
+	}
+	#page div.search-form input.searchbtn {
+			text-indent: 0; /* else hides button */    
+			font-size: 0; /* hide text */
+			line-height: 7px; /* hide text */
+	}	
+	
+/* threesteps search form */
+
+	#page #threesteps form a {
+	/* match height of adjacent search field */
+		padding-top: 3px;
+		padding-bottom: 3px;
+		margin-bottom: 1px;
+		display: inline-block;
+	}
+	
+/* RH sidebar */
+
+	#page div.howto-report,
+	#page div.social-buttons {
+		float: none; /* resolve width issues */
+		overflow: auto; /* clear floated children */
+		padding-bottom: 0; /* redice vert whitespace */
+	}
